@@ -1,0 +1,350 @@
+:root {
+    --main-color: #FF5722;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 2000px;
+}
+
+/* Start Setting-Box */
+.setting-box{
+    position: fixed;
+    left: -250px;
+    top: 0;
+    background-color:rgba(255, 255, 255, 0.8);
+    width: 250px; 
+    min-height: 100vh;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.setting-box.open{
+    left: 0;
+}
+
+.setting-box .toggle-setting{
+    position: absolute;
+    right: -30px;
+    top: 100px;
+    background-color:rgba(255, 255, 255, 0.8);
+    width: 30px; 
+    text-align: center;
+    cursor: pointer;
+}
+
+.setting-box .toggle-setting .fa-gear{
+    width: 30px;
+    padding: 8px 0;
+}
+
+.setting-box .setting-container .option-box {
+   
+    padding: 15px;
+    text-align: center;
+    background-color: #EEE;
+    margin: 10px;
+}
+
+.setting-box .setting-container .option-box h4 {
+    margin: 0;
+    color: #666;
+}
+
+.setting-box .setting-container .option-box .color-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.setting-box .setting-container .option-box .color-list li {
+    width: 25px;
+    height: 25px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid #EEE;
+    display: inline-block;
+}
+
+.setting-box .setting-container .option-box .color-list li.active {
+    opacity: 1;
+    border-color: #FFF;
+}
+
+.setting-box .setting-container .option-box .color-list li:first-child {
+    background-color: var(--main-color);
+}
+
+.setting-box .setting-container .option-box .color-list li:nth-child(2) {
+    background-color: #FF9800
+}
+
+.setting-box .setting-container .option-box .color-list li:nth-child(3) {
+    background-color: #009688
+}
+
+.setting-box .setting-container .option-box .color-list li:nth-child(4) {
+    background-color: #03A9F4
+}
+
+.setting-box .setting-container .option-box .color-list li:nth-child(5) {
+    background-color: #4CAF50
+}
+
+/* End Setting Box */
+
+
+
+
+
+/* Start Landing Page */
+.landing-page {
+    min-height: 100vh;                              /*100% of the viewport(body + scrollbar) height*/
+    background-image: url(../imgs/01.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+
+.landing-page .overlay{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.landing-page .header-area{
+    position: relative;
+    z-index: 2;
+    color: #FFF;
+    display: flex;
+    padding: 10px;
+}
+
+.landing-page .header-area .logo{
+    width: 300px;
+    padding: 15px;
+    font-weight: bold;
+}
+.landing-page .header-area .links{
+    list-style: none;
+    width: 100%;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 20px;
+    font-size: 15px;
+}
+
+.landing-page .header-area .links li{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+
+.landing-page .header-area .links li a{
+    color: #FFF;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+.landing-page .header-area .links li a:hover,.landing-page .header-area .links li a.active{
+    color: var(--main-color);
+}
+
+
+.landing-page .introduction-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #FFF;
+    text-align: center;
+    width: 100%;
+}
+
+.landing-page .introduction-text h1{
+    font-size: 70px;
+    margin: 12px;
+}
+.landing-page .introduction-text h1 span{
+    color: var(--main-color);
+}
+.landing-page .introduction-text p{
+    line-height: 1.6;
+    margin: 0;
+    font-size: 40px;
+}
+
+
+
+/* End Landing Page */
+
+
+/* Start about us */
+.container
+{
+    width: 1170;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+
+
+.about-us
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+}
+
+.about-us .info-box
+{
+    flex: 1;
+    padding: 30px;
+   
+}
+
+.about-us .info-box h2
+{
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    margin: 0 0 10px;
+}
+
+.about-us .info-box p
+{
+    line-height: 1.8;
+    margin: 0;
+}
+
+.about-us .info-box a {
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    padding: 20px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.about-us .image-box img
+{
+    flex: 1;
+    text-align: center;
+    
+}
+.about-us .image-box img
+{
+    width:470px
+}
+
+
+/* End about us */
+
+/* Start skiils */
+
+.skills {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #EEE;
+}
+
+
+.skills .container h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    margin: 0 0 10px;
+}
+
+.skills .container .skill-box {
+    background-color: white;
+    display: flex;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+
+.skills .container .skill-box .skill-name {
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    width: 100px;
+}
+
+.skills .container .skill-box .skill-progress {
+    height: 30px;
+    background-color: white;
+    width: 100%;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills .container .skill-box .skill-progress span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    width: 0%;
+    border-radius: 6px;
+    transition: all .3s;
+    
+}
+
+#Works {
+    padding-top: 40px;
+    color: var(--main-color);
+}
+
+
+.contact {
+    margin-top: 40px;
+    background-color: #252F31;
+}
+
+.contact h1{
+    padding-top: 40px;
+    color: white;
+}
+
+form {
+    max-width: 450px;
+    margin: 20px auto;
+    background-color: #252F31;
+}
+form input,
+form textarea {
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 500px;
+}
+
+form textarea {
+    height: 250px;
+    width: 500px;
+}
+
+
+
+
+
+/* End skiils */
